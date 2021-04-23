@@ -1,12 +1,12 @@
 {
-    "Dinos": [
+    "dinos": [
         {
             "species": "Triceratops",
             "weight": 13000,
             "height": 114,
             "diet": "herbavor",
             "where": "North America",
-            "when": "Late Cretaceous",
+            "when": "North America",
             "fact": "First discovered in 1889 by Othniel Charles Marsh"
         },
         {
