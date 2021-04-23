@@ -66,7 +66,7 @@ class animal {
   }
   getImage() {
     return (
-      "./images/" + this.species.toLowerCase().split(" ").join("_") + ".png"
+      "./images/" + this.species.toLowerCase().split(" ").join(" ") + ".png"
     );
   }
 
@@ -105,7 +105,11 @@ const getHtml = () => {
 
 // shuffle animals data
 function randomData(animalData) {
+  const human = animalData.pop();
+  const pigeon = animalData.pop();
   animalData.sort(() => Math.random() - 0.5);
+  animalData.push(pigeon);
+  animalData.splice(4, 0, human);
 }
 // On button click, prepare and display infographic
 btnSubmit.addEventListener("click", function () {
