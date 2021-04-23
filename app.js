@@ -1,22 +1,6 @@
-//done
-// ## Create Dino Constructor         >>done
-// ## Create Dino Objects             >>done
-// ## Create Human Object             >>done
-// ## Remove form from screen         >>done
-// ## Create Dino Compare Method 1    >>done
-// ## Create Dino Compare Method 2    >>done
-// ## Create Dino Compare Method 3    >>done
-// ## Generate Tiles for each Dino in Array    >>done
-// ## Add tiles to DOM                         >>done
-
-// @@ NOTE: Weight in JSON file is in lbs, height in inches.
-//not yet
-// ## Use IIFE to get human data from form
-
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log(" DOMContentLoaded - DOM ready!");
   (() => {
     //variables
     const btnSubmit = document.getElementById("btn");
@@ -128,13 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       form.style.display = "none";
       grid.display;
-
-      // console.log(name, feet, inches, weight, diet);
     });
   })();
 });
-
-console.log("sync data");
-window.onload = () => {
-  console.log("window.onload");
-};
