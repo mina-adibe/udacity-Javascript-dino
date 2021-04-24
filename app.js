@@ -1,9 +1,5 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", () => {
-  (() => {})();
-});
-
 //variables
 const btnSubmit = document.getElementById("btn");
 const form = document.getElementById("dino-compare");
@@ -46,7 +42,7 @@ class animal {
     this.where = where;
     this.when = when;
     this.fact = fact;
-    this.facts = [facts];
+    this.facts = [];
   }
 
   compareHeight() {
@@ -76,9 +72,24 @@ class animal {
         ? `<h3>${human.name}</h3>`
         : `<h3>${this.species}</h3>`;
     const image = `<img src="${this.getImage()}"   >`;
-    const description = `<p>${this.fact}</p>`;
+    const description =
+      this.species === "human"
+        ? `<p>just a weak human </p>`
+        : this.species === "Pigeon"
+        ? `<p>All birds are Dinosaurs.</p>`
+        : `<p>${this.setAllFacts()}</p>`;
 
     return `<div class="grid-item"> ${title}${image}${description} </div>`;
+  }
+
+  setAllFacts() {
+    this.facts.push(
+      this.compareHeight(),
+      this.compareWeight(),
+      this.compareDiet(),
+      this.fact
+    );
+    return this.facts[Math.floor(Math.random() * this.facts.length)];
   }
 }
 const human = new animal("human");
@@ -89,7 +100,6 @@ const humanProp = (name, feet, inches, weight, diet) => {
   human.weight = weight;
   human.diet = diet;
   animalData.push(human);
-  console.log(human);
 };
 
 // create Html from data of animals
